@@ -26,6 +26,8 @@ All components are selected by default. Students can uncheck unwanted components
 
 Instructors can open the session draw log and select **Delete** beside any generated profile. In a shared room, sign in as instructor first; students do not see Delete controls and cannot call the deletion action. Deleting a draw releases its active combination without changing other draws or adding that student back to the queue. Independent mode requires the local instructor password.
 
+Instructor access is remembered for 60 minutes after entering the password in the same browser tab, including page refreshes. Editing options and routine management actions reuse that access. Use Lock instructor access to end it immediately. Shared-room permissions continue to be checked by the backend; the password itself is not saved.
+
 ## Architecture
 
 - `dist/index.html`: self-contained HTML, styling, wheel animation, QR encoder, browser-local mode, and shared-room client. GitHub Pages serves only `dist/`.
