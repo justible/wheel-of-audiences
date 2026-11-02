@@ -157,16 +157,6 @@
       ]
     },
     {
-      "key": "gender",
-      "label": "Gender identity",
-      "options": [
-        "Woman",
-        "Man",
-        "Nonbinary person",
-        "Gender-fluid person"
-      ]
-    },
-    {
       "key": "religion",
       "label": "Religion / spiritual outlook",
       "options": [
@@ -194,5 +184,5 @@
       ]
     }
   ],
-  "catalogVersion": 2
+  "catalogVersion": 3
 }

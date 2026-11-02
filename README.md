@@ -10,13 +10,15 @@ Live page: https://justible.github.io/wheel-of-audiences/
 
 ## Use in class
 
-Create a live class room and choose an instructor password of at least eight characters. Share the room’s link or the QR code at the top of the page. Students choose at least the required number of components, enter a name or initials, join the shared queue, and spin when their turn arrives. Projector view enlarges the selected wheels.
+Create a live class room and choose an instructor password of at least eight characters. Share the room’s link or the QR code at the top of the page. Students enter a name or initials in the single name field and select **Add to queue**; they can join before choosing components. They must select at least the required number of components before spinning. A queued student's choices update the shared queue automatically. Instructors can type names in the same field and add students from the classroom screen. Projector view enlarges the selected wheels.
 
 Students can search the session log and reopen or copy their original assigned profile. Saved profiles keep their original values when the instructor changes wheel options. Only the complete selected combination plus listening context locks, for two calendar months. Individual component values remain available.
 
 Use **Edit wheel options** to change the required minimum, add fandoms, and add or remove wheels. These changes require the instructor password and do not require redeployment. Unlocking, undoing a draw, and clearing the queue also require instructor access. Manual unlocking keeps the session log.
 
 Customers are assumed to live in the US and prefer English. Assignment instructions are maintained separately from this website.
+
+The default catalog contains 14 wheels. Gender identity is removed from current options and older saved templates; the required minimum is adjusted if necessary. Existing assigned profiles keep their original values.
 
 ## Architecture
 
@@ -33,7 +35,7 @@ All connected users with a class room link can see its queue and assignments. In
 
 Install dependencies with `npm ci`. Run `npm test` for classroom, configuration and session-log checks. Run `npm run dev:api` to start the local backend.
 
-Develop and test locally. Publish only when Dr. Blessinger explicitly requests publication. To release the API, use `npm run deploy:api`. Configure the verified backend URL in the frontend before triggering **Publish GitHub Pages** in GitHub Actions. The deployment workflow rejects the pending placeholder endpoint.
+Develop and test locally, then publish requested changes to GitHub Pages and Cloudflare without a separate confirmation. Dr. Blessinger authorized this ongoing workflow on November 2, 2026. To release the API, use `npm run deploy:api`. Configure the verified backend URL in the frontend before triggering **Publish GitHub Pages** in GitHub Actions. The deployment workflow rejects the pending placeholder endpoint. The retired Netlify redirect is not part of routine releases.
 
 Private migration backups remain outside the repository. The temporary migration API requires a deployment-only secret and must be disabled by deleting that secret after verification. Existing room IDs, options, password hashes, owner hashes, locks, and assignment snapshots are imported unchanged. Old links should be handed off only after the new site and backend are verified.
 
