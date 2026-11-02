@@ -4,9 +4,9 @@ An interactive audience generator for use in Dr. Blessinger’s classes.
 
 ## Hosting migration
 
-The GitHub Pages frontend and Cloudflare backend are prepared and tested locally. Publication is pending Cloudflare account authorization. The existing Netlify site is unchanged until the replacement is verified.
+The GitHub Pages frontend and free-tier Cloudflare backend are published and verified. All 33 stored records across eight class rooms, including six saved assignments, were copied exactly and the eight class snapshots were verified. Temporary migration access has been removed. The old Netlify address now forwards to GitHub Pages, transferring this app’s browser settings and queue ownership through a fragment that is removed immediately. The old backend has been retired; its original stored data remains as a safety copy. A browser handoff verified that the existing customized 11-wheel template was preserved.
 
-Planned page address: https://justible.github.io/wheel-of-audiences/
+Live page: https://justible.github.io/wheel-of-audiences/
 
 ## Use in class
 
