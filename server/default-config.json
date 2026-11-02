@@ -1,0 +1,198 @@
+{
+  "required": 4,
+  "dimensions": [
+    {
+      "key": "age",
+      "label": "Age",
+      "options": [
+        "Adults ages 18–24",
+        "Adults ages 25–34",
+        "Adults ages 35–44",
+        "Adults ages 45–54",
+        "Adults ages 55–64",
+        "Adults ages 65 and older"
+      ]
+    },
+    {
+      "key": "race",
+      "label": "Race / ethnicity",
+      "options": [
+        "Black / African American",
+        "Asian American",
+        "Hispanic / Latino/a",
+        "Native American / Alaska Native",
+        "White",
+        "Multiracial",
+        "Middle Eastern / North African",
+        "Native Hawaiian / Pacific Islander"
+      ]
+    },
+    {
+      "key": "income",
+      "label": "Household income",
+      "options": [
+        "Under $35,000 annual household income",
+        "$35,000–$74,999 annual household income",
+        "$75,000–$124,999 annual household income",
+        "$125,000 or more annual household income"
+      ]
+    },
+    {
+      "key": "education",
+      "label": "Education",
+      "options": [
+        "High school diploma or GED",
+        "Trade / vocational credential",
+        "Some college or an associate degree",
+        "Bachelor’s degree",
+        "Graduate / professional degree"
+      ]
+    },
+    {
+      "key": "fandom",
+      "label": "Fandom / preference",
+      "options": [
+        "Star Trek",
+        "Star Wars",
+        "Doctor Who",
+        "Pokémon",
+        "The Legend of Zelda",
+        "The Lord of the Rings",
+        "Stardew Valley",
+        "Animal Crossing",
+        "Minecraft",
+        "Marvel superheroes",
+        "Jane Austen novels",
+        "Studio Ghibli films"
+      ]
+    },
+    {
+      "key": "living",
+      "label": "Living situation",
+      "options": [
+        "Living in a college residence hall",
+        "Sharing an apartment with roommates",
+        "Living in a multigenerational home",
+        "Living in a compact recreational vehicle",
+        "Living in a small studio apartment",
+        "Living in a detached house"
+      ]
+    },
+    {
+      "key": "location",
+      "label": "Community / location",
+      "options": [
+        "A rural community",
+        "A suburban neighborhood",
+        "A small town",
+        "A dense urban neighborhood",
+        "A remote community with limited local retail",
+        "A university-centered community"
+      ]
+    },
+    {
+      "key": "work",
+      "label": "Occupation / work schedule",
+      "options": [
+        "A college student with a part-time job",
+        "A healthcare worker on rotating shifts",
+        "A remote office worker",
+        "A retail or service worker with variable hours",
+        "A self-employed craft seller",
+        "A skilled-trades worker",
+        "An educator with an early daily schedule",
+        "An adult combining paid work and caregiving"
+      ]
+    },
+    {
+      "key": "household",
+      "label": "Household composition",
+      "options": [
+        "Living alone",
+        "Living with roommates",
+        "Living with a partner",
+        "A household with children at home",
+        "A multigenerational household",
+        "Sharing a home with a sibling or other relative"
+      ]
+    },
+    {
+      "key": "assembly",
+      "label": "Assembly experience",
+      "options": [
+        "Building a first electronics kit",
+        "Experienced with crafts but new to electronics",
+        "Comfortable with basic soldering",
+        "An experienced electronics hobbyist",
+        "Experienced with woodworking but new to wiring",
+        "Comfortable following visual instructions but unfamiliar with circuit terminology"
+      ]
+    },
+    {
+      "key": "access",
+      "label": "Access needs",
+      "options": [
+        "Low vision: investigate readable and tactile labels",
+        "Limited hand dexterity: investigate assembly handling and tool access",
+        "Hearing differences: investigate clear visual setup feedback",
+        "Limited ability to distinguish some colors: investigate labels beyond color coding",
+        "Difficulty with dense text: investigate clear step layout and visual sequencing",
+        "Limited reach: investigate placement and access to controls"
+      ]
+    },
+    {
+      "key": "interests",
+      "label": "Other interests",
+      "options": [
+        "Community gardening",
+        "Tabletop role-playing games",
+        "Live music and local concerts",
+        "Following a favorite sports team",
+        "Sewing and visible mending",
+        "Cooking and baking",
+        "Photography",
+        "Hiking and nature observation",
+        "Collecting vinyl records",
+        "Book clubs and reading groups"
+      ]
+    },
+    {
+      "key": "gender",
+      "label": "Gender identity",
+      "options": [
+        "Woman",
+        "Man",
+        "Nonbinary person",
+        "Gender-fluid person"
+      ]
+    },
+    {
+      "key": "religion",
+      "label": "Religion / spiritual outlook",
+      "options": [
+        "Christian",
+        "Muslim",
+        "Jewish",
+        "Buddhist",
+        "Hindu",
+        "Sikh",
+        "Agnostic",
+        "Atheist",
+        "Spiritual but not religious"
+      ]
+    },
+    {
+      "key": "heritage",
+      "label": "Family / cultural heritage",
+      "options": [
+        "A first-generation immigrant household",
+        "A second-generation immigrant household",
+        "A family with deep roots in the current region",
+        "A household with mixed cultural heritage",
+        "A family maintaining ties to an ancestral region",
+        "A family recently relocated between U.S. regions"
+      ]
+    }
+  ],
+  "catalogVersion": 2
+}

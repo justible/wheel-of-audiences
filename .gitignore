@@ -1,0 +1,11 @@
+node_modules/
+.netlify/
+.openai/
+.wrangler/
+.env*
+.dev.vars*
+private-backups/
+netlify/
+netlify.toml
+README.txt
+RELEASE.json
