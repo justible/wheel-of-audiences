@@ -22,6 +22,8 @@ The default catalog contains 14 wheels. Gender identity is removed from current 
 
 The Spin button explains missing selections instead of showing an unavailable action. A queued student must have the required number of components selected before the button changes to **Spin for [name]**.
 
+All components are selected by default. Students can uncheck unwanted components; Select all components restores the full selection. Deselections are remembered for the same class session on that browser. Phones show a direct start or queue-entry button instead of a QR scan; desktop and projector views retain the QR code.
+
 ## Architecture
 
 - `dist/index.html`: self-contained HTML, styling, wheel animation, QR encoder, browser-local mode, and shared-room client. GitHub Pages serves only `dist/`.
