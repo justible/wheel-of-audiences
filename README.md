@@ -12,13 +12,15 @@ Live page: https://justible.github.io/wheel-of-audiences/
 
 Create a live class room and choose an instructor password of at least eight characters. Share the room’s link or the QR code at the top of the page. Students enter a name or initials in the single name field and select **Add to queue**; they can join before choosing components. They must select at least the required number of components before spinning. A queued student's choices update the shared queue automatically. Instructors can type names in the same field and add students from the classroom screen. Projector view enlarges the selected wheels.
 
-Students can search the session log and reopen or copy their original assigned profile. Saved profiles keep their original values when the instructor changes wheel options. Only the complete selected combination plus listening context locks, for two calendar months. Individual component values remain available.
+Students can search the session log and reopen or copy their original assigned profile. Saved profiles keep their original values when the instructor changes wheel options. The complete combination of selected components locks for two calendar months; individual component values remain available. New profiles have no additional listening-setting assignment or menu. Historical profiles retain their original saved information and continue to prevent repeats of their selected component combinations.
 
 Use **Edit wheel options** to change the required minimum, add fandoms, and add or remove wheels. These changes require the instructor password and do not require redeployment. Unlocking, undoing a draw, and clearing the queue also require instructor access. Manual unlocking keeps the session log.
 
 Customers are assumed to live in the US and prefer English. Assignment instructions are maintained separately from this website.
 
 The default catalog contains 14 wheels. Gender identity is removed from current options and older saved templates; the required minimum is adjusted if necessary. Existing assigned profiles keep their original values.
+
+The Spin button explains missing selections instead of showing an unavailable action. A queued student must have the required number of components selected before the button changes to **Spin for [name]**.
 
 ## Architecture
 

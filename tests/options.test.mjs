@@ -22,3 +22,20 @@ test('joining needs only a name; spinning still requires the minimum and name up
   const drawn=await call({...draw,selectedKeys});assert.equal(drawn.status,200);assert.equal(drawn.data.record.name,'Updated name');
 });
 
+test('new profiles omit listening settings while honoring existing profile locks',async()=>{
+  const {call}=harness();
+  const config={catalogVersion:3,required:1,dimensions:[{key:'fandom',label:'Fandom',options:['One available fandom']}]};
+  const {room}=(await call({action:'create',name:'No listening setting',password:'local-test-only',config})).data;
+  const join=async(owner,name)=>call({action:'join',room,owner,name,selectedKeys:['fandom']});
+  const a=await join('a'.repeat(48),'Earlier student');
+  const first=await call({action:'draw',room,owner:'a'.repeat(48),id:a.data.id,selectedKeys:['fandom'],configVersion:a.data.state.configVersion,context:'home',challenge:'standard'});
+  assert.equal(first.status,200);assert.equal(first.data.state.locked.length,1);
+  const b=await join('b'.repeat(48),'Later student');
+  const repeated=await call({action:'draw',room,owner:'b'.repeat(48),id:b.data.id,selectedKeys:['fandom'],configVersion:b.data.state.configVersion,context:'none',challenge:'standard'});
+  assert.equal(repeated.status,409);
+  const {room:another}=(await call({action:'create',name:'Fresh profiles',password:'local-test-only',config})).data;
+  const j=await call({action:'join',room:another,owner:'c'.repeat(48),name:'Justin',selectedKeys:['fandom']});
+  const draw=await call({action:'draw',room:another,owner:'c'.repeat(48),id:j.data.id,selectedKeys:['fandom'],configVersion:j.data.state.configVersion,context:'none',challenge:'standard'});
+  assert.equal(draw.status,200);assert.equal(draw.data.record.context,'none');
+});
+
