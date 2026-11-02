@@ -25,7 +25,11 @@ export default {
     if(!['/classroom','/events','/migration'].includes(url.pathname))return new Response('Not found',{status:404});
     const stub=env.CLASSROOMS.get(env.CLASSROOMS.idFromName('audience-classrooms-v1'));
     // Only this public router applies CORS. The room handler retains its same-origin check.
-    const headers=new Headers(request.headers);headers.delete('Origin');
+    const headers=new Headers(request.headers);headers.delete('Origin');headers.delete('X-Audience-Migration');
+    if(url.pathname==='/migration'){
+      if(!env.MIGRATION_KEY||request.headers.get('Authorization')!=='Bearer '+env.MIGRATION_KEY)return new Response('Not found',{status:404});
+      headers.delete('Authorization');headers.set('X-Audience-Migration','authorized');
+    }
     const response=await stub.fetch(new Request(request,{headers}));
     return response.status===101?response:cors(response,origin);
   }
@@ -72,7 +76,9 @@ export class Classrooms extends DurableObject {
   }
   async migration(request){
     // Temporary deployment-only secret; removed once imported data is verified.
-    if(!this.env.MIGRATION_KEY||request.headers.get('Authorization')!=='Bearer '+this.env.MIGRATION_KEY)return new Response('Not found',{status:404});
+    // The public router checks its current secret binding and strips caller-supplied markers.
+    // This avoids keeping a rotated secret in a long-lived object's environment.
+    if(request.headers.get('X-Audience-Migration')!=='authorized')return new Response('Not found',{status:404});
     if(request.method==='GET')return Response.json({entries:[...(await this.ctx.storage.list()).entries()]});
     if(request.method!=='POST')return new Response('Method not allowed',{status:405});
     const {entries}=await request.json();
