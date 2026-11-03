@@ -22,7 +22,7 @@ The default catalog contains 14 wheels. Gender identity is removed from current 
 
 The Spin button explains missing selections instead of showing an unavailable action. A queued student must have the required number of components selected before the button changes to **Spin for [name]**.
 
-All components are selected by default. Students can uncheck unwanted components; Select all components restores the full selection. Deselections are remembered for the same class session on that browser. Phones show a direct start or queue-entry button instead of a QR scan; desktop and projector views retain the QR code.
+All components are selected by default. Students can uncheck unwanted components; Select all components restores the full selection. Deselections are remembered for the same class session on that browser. Phones show a direct start or queue-entry button and an optional Show QR code control. Desktop, full-width touchscreen, and projector views always display the class QR code in the first panel at the top of the page. Touch input alone never hides it.
 
 Instructors can open the session draw log and select **Delete** beside any generated profile. In a shared room, sign in as instructor first; students do not see Delete controls and cannot call the deletion action. Deleting a draw releases its active combination without changing other draws or adding that student back to the queue. Independent mode requires the local instructor password.
 
