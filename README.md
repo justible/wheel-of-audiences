@@ -28,6 +28,8 @@ Instructors can open the session draw log and select **Delete** beside any gener
 
 Instructor access is remembered for 60 minutes after entering the password in the same browser tab, including page refreshes. Editing options and routine management actions reuse that access. Use Lock instructor access to end it immediately. Shared-room permissions continue to be checked by the backend; the password itself is not saved.
 
+Use Review saved rosters to open the log. Choose a roster switches between independently generated browser spins and class sessions previously visited in this browser. Saved class links are recovered from existing app storage, and the chooser shows names, spin counts, and latest draw dates. All saved spins is the default; the current two-month period is an optional filter. Earlier saved profiles remain reviewable without a new spin, and CSV or clipboard export follows the selected time view. A different browser still needs the original class-session link.
+
 ## Architecture
 
 - `dist/index.html`: self-contained HTML, styling, wheel animation, QR encoder, browser-local mode, and shared-room client. GitHub Pages serves only `dist/`.
