@@ -60,15 +60,15 @@ export class Classrooms extends DurableObject {
     // Serialize complete operations, including claims and snapshots, across devices.
     return this.ctx.blockConcurrencyWhile(async()=>{
       if(url.pathname==='/migration')return this.migration(request);
-      let room=url.searchParams.get('room');
+      let room=url.searchParams.get('room'),action;
       if(request.method==='POST'){
         if(Number(request.headers.get('content-length')||0)>300000)return Response.json({error:'Request too large.'},{status:413});
         const body=await request.clone().text();
         if(body.length>300000)return Response.json({error:'Request too large.'},{status:413});
-        try{room=JSON.parse(body).room;}catch{return Response.json({error:'Invalid request.'},{status:400});}
+        try{const data=JSON.parse(body);room=data.room;action=data.action;}catch{return Response.json({error:'Invalid request.'},{status:400});}
       }
       const response=await this.handler(request);
-      if(response.ok&&request.method==='POST'&&room){
+      if(response.ok&&request.method==='POST'&&room&&action!=='find-sessions'){
         for(const socket of this.ctx.getWebSockets(room))try{socket.send('changed');}catch{}
       }
       return response;
