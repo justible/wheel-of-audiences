@@ -30,6 +30,8 @@ Instructor access is remembered for 60 minutes after entering the password in th
 
 Use Review saved rosters to open the log. Choose a roster switches between independently generated browser spins and class sessions previously visited in this browser. Saved class links are recovered from existing app storage, and the chooser shows names, spin counts, and latest draw dates. All saved spins is the default; the current two-month period is an optional filter. Earlier saved profiles remain reviewable without a new spin, and CSV or clipboard export follows the selected time view. A different browser still needs the original class-session link.
 
+To remove practice sessions, choose the roster and select Delete this class session. Instructor access is required. A deleted session disappears from saved choices and stops accepting students or spins. Open its old link and select Restore deleted session with instructor access to recover it. Delete this browser’s roster clears only independent spins, queue places, and locks; shared classes and wheel settings are kept.
+
 ## Architecture
 
 - `dist/index.html`: self-contained HTML, styling, wheel animation, QR encoder, browser-local mode, and shared-room client. GitHub Pages serves only `dist/`.
